@@ -1,11 +1,12 @@
 {
   "name": "7x-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The 7x JavaScript SDK",
   "scripts": {
     "test": "node_modules/jest/bin/jest.js",
     "prepublish": "tsc"
   },
+  "files": ["dist/**/*", "README.md"]
   "author": "7x <support7x.ax>",
   "license": "MIT",
   "main": "dist/index.js",
