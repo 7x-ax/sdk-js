@@ -13,8 +13,7 @@ npm i 7x-sdk
 ### Timezone API
 
 ```javascript
-import Timezone from "../src/SDK/Timezone";
-import TimezoneDTO from "../DTO/Timezone/Timezone";
+const Timezone = require('7x-sdk').Timezone;
 
 let tz = new Timezone(API_KEY);
 let data = tz.get(30.0444, 31.2357);
@@ -26,8 +25,7 @@ console.log(data.timezones);
 
 #### Distance by Coordinates
 ```javascript
-import Distance from "../src/SDK/Distance";
-import DistanceDTO from "../DTO/Distance/Distance";
+const Distance = require('7x-sdk').Distance;
 
 let d = new Distance(API_KEY);
 let data = d.getByCoordinates(22.22, 33.33, 44.44, 55.55, 'km');
@@ -38,8 +36,7 @@ data.unit; // km if you specified km, or mi if you specified mi. Defaults to km 
 
 #### Distance by Address
 ```javascript
-import Distance from "../src/SDK/Distance";
-import DistanceDTO from "../DTO/Distance/Distance";
+const Distance = require('7x-sdk').Distance;
 
 let d = new Distance(API_KEY);
 let data = d.getByAddress('London, UK', 'Paris, France', 'km');
@@ -52,11 +49,7 @@ $data.unit; // km if you specified km, or mi if you specified mi. Defaults to km
 
 #### Geocode by City / Address String
 ```javascript
-import Geocode from "../src/SDK/Geocode";
-import GeocodeCollection from "../DTO/Geocode/GeocodeCollection";
-import GeocodeDTO from "../DTO/Geocode/Geocode";
-import Coordinates from "../DTO/Common/Coordinates";
-import Location from "../DTO/Geocode/Location";
+const Geocode = require('7x-sdk').Geocode;
 
 let g = new Geocode(API_KEY);
 let data = g.get('Trafalgar Square, London, UK');
@@ -69,11 +62,7 @@ for (let obj of data.objects) {
 
 #### Geocode Search (to build search suggest / autocomplete functionality)
 ```javascript
-import Geocode from "../src/SDK/Geocode";
-import GeocodeCollection from "../DTO/Geocode/GeocodeCollection";
-import GeocodeDTO from "../DTO/Geocode/Geocode";
-import Coordinates from "../DTO/Common/Coordinates";
-import Location from "../DTO/Geocode/Location";
+const Geocode = require('7x-sdk').Geocode;
 
 let g = new Geocode(API_KEY);
 let data = g.search('Lon');
@@ -86,11 +75,7 @@ for (let obj of data.objects) {
 
 #### Reverse Geocoding by Coordinates
 ```javascript
-import Geocode from "../src/SDK/Geocode";
-import GeocodeCollection from "../DTO/Geocode/GeocodeCollection";
-import GeocodeDTO from "../DTO/Geocode/Geocode";
-import Coordinates from "../DTO/Common/Coordinates";
-import Location from "../DTO/Geocode/Location";
+const Geocode = require('7x-sdk').Geocode;
 
 let g = new Geocode(API_KEY);
 let data = g.get('Trafalgar Square, London, UK');

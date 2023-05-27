@@ -1,3 +1,12 @@
 {
-  "extends": "./tsconfig-esm.json"
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["dist-esm", "dist-cjs", "generated", "docs", "node_modules", "dist"]
 }
