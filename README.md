@@ -78,7 +78,7 @@ for (let obj of data.objects) {
 const Geocode = require('7x-sdk').Geocode;
 
 let g = new Geocode(API_KEY);
-let data = g.get('Trafalgar Square, London, UK');
+let data = g.reverse(22.223232, 33.343443);
 // data is an instance of GeocodeCollection. This contains an array of objects.
 for (let obj of data.objects) {
     var_dump(obj.coordinates); // Instance of Coordinates
